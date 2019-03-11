@@ -74,7 +74,7 @@ someOptionalString = nil
 
 // 显示解包Optional 变量
 var unwrappedString: String! = "Value is expected."
-var unwrappedString2: ImplicitlyUnwrappedOptional<String> = "Value is expected." // 和上面完全等价，（!）也是语法糖，推荐写法
+var unwrappedString2: Optional<String> = "Value is expected." // 和上面完全等价，（!）也是语法糖，推荐写法
 if let someOptionalStringConstant = someOptionalString {
     // 由于变量someOptionalString 有值，不为空，所以 if 条件为真
     if !someOptionalStringConstant.hasSuffix("ok") {
