@@ -126,6 +126,29 @@ var emptyMutableDictionary = [String : Float]() // 使用 var 定义字典常量
 var explicityEmptyMutableDictionary: [String: Float] = [:] // 与上一句等价
 
 
+// 用数组实现栈
+class Stack {
+    var stack: [AnyObject]
+    var isEmpty: Bool { return stack.isEmpty }
+    var peek: AnyObject? { return stack.last }
+    
+    init() {
+        stack = [AnyObject]()
+    }
+    
+    func push(object: AnyObject) {
+        stack.append(object)
+    }
+    
+    func pop() -> AnyObject? {
+        if (!isEmpty) {
+            return stack.removeLast()
+        } else {
+            return nil
+        }
+    }
+}
+
 //
 // MARK: - 控制流
 //
